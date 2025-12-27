@@ -1,6 +1,4 @@
 
-# **VERIFRAX** — Public Verifier
-
 <!--
 VERIFRAX-verify — Public Verifier
 Repo: https://github.com/Verifrax/VERIFRAX-verify

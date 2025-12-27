@@ -184,3 +184,9 @@ SOFTWARE.
 <strong>VERIFRAX</strong><br/>
 Public verifier: [https://verifrax.github.io/VERIFRAX-verify/](https://verifrax.github.io/VERIFRAX-verify/)
 
+---
+AUTHORITATIVE LINKS:
+- SPEC: https://github.com/Verifrax/VERIFRAX-SPEC
+- PROFILES: https://github.com/Verifrax/VERIFRAX-PROFILES
+- VERIFIER: https://github.com/Verifrax/VERIFRAX-verify
+

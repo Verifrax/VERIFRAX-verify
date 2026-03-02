@@ -190,3 +190,8 @@ AUTHORITATIVE LINKS:
 - PROFILES: https://github.com/Verifrax/VERIFRAX-PROFILES
 - VERIFIER: https://github.com/Verifrax/VERIFRAX-verify
 
+
+## Contract
+- deterministic verification
+- minimal dependency footprint
+- suitable for CI + local use

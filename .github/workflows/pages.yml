@@ -29,6 +29,17 @@ jobs:
         run: |
           set -euo pipefail
           npm run build
+
+      - name: Bind verifier hostname
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f public/CNAME
+          grep -Fx "verify.verifrax.net" public/CNAME
+          cp public/CNAME dist/CNAME
+          test -f dist/index.html
+          grep -q "<title>Verifrax Verifier</title>" dist/index.html
+
       - uses: actions/configure-pages@v5
         with:
           enablement: true

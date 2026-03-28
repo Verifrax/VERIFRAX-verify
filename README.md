@@ -1,8 +1,9 @@
 
 <!--
 VERIFRAX-verify — Public Verifier
+Custom domain: https://verify.verifrax.net/
 Repo: https://github.com/Verifrax/VERIFRAX-verify
-Pages: https://verifrax.github.io/VERIFRAX-verify/
+Pages: https://verify.verifrax.net/
 -->
 
 <div align="center">
@@ -21,7 +22,7 @@ Pages: https://verifrax.github.io/VERIFRAX-verify/
 </p>
 
 <p>
-  <a href="https://verifrax.github.io/VERIFRAX-verify/"><strong>Open Verifier UI</strong></a>
+  <a href="https://verify.verifrax.net/"><strong>Open Verifier UI</strong></a>
   &nbsp;&nbsp;|&nbsp;&nbsp;
   <a href="https://github.com/Verifrax/VERIFRAX-verify"><strong>Repository</strong></a>
 </p>
@@ -64,7 +65,7 @@ This repository is intentionally minimal:
 
 ## Live Verifier
 
-**URL:** [https://verifrax.github.io/VERIFRAX-verify/](https://verifrax.github.io/VERIFRAX-verify/)
+**URL:** [https://verify.verifrax.net/](https://verify.verifrax.net/)
 
 ### Verification contract (current)
 
@@ -182,7 +183,7 @@ SOFTWARE.
 ## Maintainer
 
 <strong>VERIFRAX</strong><br/>
-Public verifier: [https://verifrax.github.io/VERIFRAX-verify/](https://verifrax.github.io/VERIFRAX-verify/)
+Public verifier: [https://verify.verifrax.net/](https://verify.verifrax.net/)
 
 ---
 AUTHORITATIVE LINKS:

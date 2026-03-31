@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VERIFRAX Verify Spec</title>
+  <meta name="description" content="Verifier schema and proof structure reference.">
+</head>
+<body>
+  <main>
+    <h1>VERIFRAX Verify Spec</h1>
+    <p>Verifier-facing reference only.</p>
+    <h2>Expected Proof Shape</h2>
+    <ul>
+      <li><code>schema = verifrax.proof.v1</code></li>
+      <li><code>artifact.sha256</code> must be a 64-character hex digest</li>
+      <li>Proof object must remain parseable JSON</li>
+      <li>Verification reference must resolve to the public verification surface</li>
+    </ul>
+  </main>
+</body>
+</html>

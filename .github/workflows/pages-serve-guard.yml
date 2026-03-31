@@ -1,0 +1,43 @@
+name: pages-serve-guard
+
+on:
+  workflow_run:
+    workflows: ["pages"]
+    types: [completed]
+
+jobs:
+  assert_serving:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assert Pages URL serves verifier UI (retry)
+        shell: bash
+        env:
+          PAGES_URL: https://verifrax.github.io/VERIFRAX-verify/
+          ORIGIN_URL: https://raw.githubusercontent.com/Verifrax/VERIFRAX-verify/main/index.html
+        run: |
+          set -euo pipefail
+
+          ok() { echo "OK: $*"; }
+          die() { echo "FAIL: $*" >&2; exit 1; }
+
+          # 1) Origin must be correct (rules out bad publish/source)
+          curl -fsSL "$ORIGIN_URL" | grep -q "verifrax.proof.v1" || die "origin missing schema gate"
+          curl -fsSL "$ORIGIN_URL" | grep -q "<title>Verifrax Verifier</title>" || die "origin missing title"
+          ok "origin content present"
+
+          # 2) Pages can 503 transiently: retry with backoff, fail only if sustained
+          for i in 1 2 3 4 5 6 7 8; do
+            echo "TRY=$i"
+            if curl -fsSL "$PAGES_URL" | grep -q "verifrax.proof.v1" && \
+               curl -fsSL "$PAGES_URL" | grep -q "<title>Verifrax Verifier</title>"; then
+              ok "pages serving"
+              exit 0
+            fi
+            sleep $((i*3))
+          done
+
+          # final diagnostic (don’t fail because of grep; fail because still broken)
+          echo "DIAG: headers"
+          curl -sIL "$PAGES_URL" | sed -n '1,40p' || true
+          die "pages not serving after retries"

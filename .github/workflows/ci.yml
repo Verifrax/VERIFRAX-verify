@@ -1,0 +1,23 @@
+name: ci
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Repo sanity
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f README.md || (echo "E_MISSING_README" && exit 1)
+          test -f LICENSE || (echo "E_MISSING_LICENSE" && exit 1)
+          test -f SECURITY.md || (echo "E_MISSING_SECURITY" && exit 1)
+          test -f GOVERNANCE.md || (echo "E_MISSING_GOVERNANCE" && exit 1)

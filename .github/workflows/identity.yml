@@ -1,0 +1,18 @@
+name: Identity
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  identity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "identity: ok"

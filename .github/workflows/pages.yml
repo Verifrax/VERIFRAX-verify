@@ -40,6 +40,18 @@ jobs:
           test -f dist/index.html
           grep -q "<title>Verifrax Verifier</title>" dist/index.html
 
+      - name: Publish static verifier routes
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist/check dist/spec
+          test -f public/check/index.html
+          test -f public/spec/index.html
+          cp public/check/index.html dist/check/index.html
+          cp public/spec/index.html dist/spec/index.html
+          test -f dist/check/index.html
+          test -f dist/spec/index.html
+
       - uses: actions/configure-pages@v5
         with:
           enablement: true

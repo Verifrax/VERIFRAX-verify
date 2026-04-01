@@ -5,17 +5,34 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>VERIFRAX Verify Check</title>
   <meta name="description" content="Verifier entrypoint for proof checking.">
+  <style>
+    @import url("../surface-system/shell/base.css");
+  </style>
 </head>
 <body>
-  <main>
-    <h1>VERIFRAX Verify Check</h1>
-    <p>This route is the canonical verifier entrypoint.</p>
-    <ul>
-      <li>Paste a <code>*.proof.v1.json</code> object into the main verifier UI.</li>
-      <li>Structure validation is available in-browser.</li>
-      <li>Hash verification requires local artifact hashing.</li>
-    </ul>
-    <p><a href="/">Open verifier UI</a></p>
+  <main class="surface stack">
+    <div class="surface-id">VERIFRAX / verify/check</div>
+    <h1 class="surface-title">VERIFRAX Verify Check</h1>
+    <p class="surface-role">Verifier entrypoint for proof checking.</p>
+    <p class="surface-boundary">This route points to verification. It does not publish proof, issue authority, or accept intake.</p>
+
+    <section class="panel">
+      <h2>Check flow</h2>
+      <ul class="list-tight">
+        <li>Paste a <code>*.proof.v1.json</code> object into the main verifier UI.</li>
+        <li>Structure validation is available in-browser.</li>
+        <li>Hash verification requires local artifact hashing.</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Next valid actions</h2>
+      <div class="links">
+        <a href="/">Open verifier UI</a>
+        <a href="/spec">Read spec</a>
+        <a href="https://proof.verifrax.net/">Open proof surface</a>
+      </div>
+    </section>
   </main>
 </body>
 </html>

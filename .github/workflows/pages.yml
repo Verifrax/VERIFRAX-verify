@@ -25,32 +25,31 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - name: Build dist
         run: |
           set -euo pipefail
           npm run build
 
-      - name: Bind verifier hostname
+      - name: Bind verifier hostname and publish static routes
         shell: bash
         run: |
           set -euo pipefail
           test -f public/CNAME
           grep -Fx "verify.verifrax.net" public/CNAME
           cp public/CNAME dist/CNAME
-          test -f dist/index.html
-          grep -q "<title>Verifrax Verifier</title>" dist/index.html
 
-      - name: Publish static verifier routes
-        shell: bash
-        run: |
-          set -euo pipefail
           mkdir -p dist/check dist/spec
-          test -f public/check/index.html
-          test -f public/spec/index.html
           cp public/check/index.html dist/check/index.html
           cp public/spec/index.html dist/spec/index.html
+          cp -R surface-system dist/surface-system
+
+          test -f dist/index.html
+          test -f dist/CNAME
           test -f dist/check/index.html
           test -f dist/spec/index.html
+          test -f dist/surface-system/shell/base.css
+          grep -q "<title>VERIFRAX Verify</title>" dist/index.html
 
       - uses: actions/configure-pages@v5
         with:

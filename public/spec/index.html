@@ -5,18 +5,35 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>VERIFRAX Verify Spec</title>
   <meta name="description" content="Verifier schema and proof structure reference.">
+  <style>
+    @import url("../surface-system/shell/base.css");
+  </style>
 </head>
 <body>
-  <main>
-    <h1>VERIFRAX Verify Spec</h1>
-    <p>Verifier-facing reference only.</p>
-    <h2>Expected Proof Shape</h2>
-    <ul>
-      <li><code>schema = verifrax.proof.v1</code></li>
-      <li><code>artifact.sha256</code> must be a 64-character hex digest</li>
-      <li>Proof object must remain parseable JSON</li>
-      <li>Verification reference must resolve to the public verification surface</li>
-    </ul>
+  <main class="surface stack">
+    <div class="surface-id">VERIFRAX / verify/spec</div>
+    <h1 class="surface-title">VERIFRAX Verify Spec</h1>
+    <p class="surface-role">Verifier schema and proof structure reference.</p>
+    <p class="surface-boundary">This route defines verifier-facing reference only. It does not publish proof or execute intake.</p>
+
+    <section class="panel">
+      <h2>Expected proof shape</h2>
+      <ul class="list-tight">
+        <li><code>schema = verifrax.proof.v1</code></li>
+        <li><code>artifact.sha256</code> must be a 64-character hex digest</li>
+        <li>Proof object must remain parseable JSON</li>
+        <li>Verification reference must resolve to the public verification surface</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>Next valid actions</h2>
+      <div class="links">
+        <a href="/">Open verifier UI</a>
+        <a href="/check">Open check route</a>
+        <a href="https://docs.verifrax.net/">Open docs</a>
+      </div>
+    </section>
   </main>
 </body>
 </html>

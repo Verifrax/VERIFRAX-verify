@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>VERIFRAX Verify</title>
-  <meta name="description" content="Deterministic verification of proof objects.">
+  <meta name="description" content="Public verifier surface for proof structure inspection.">
   <style>
     @import url("./surface-system/shell/base.css");
     textarea{width:100%;min-height:220px;font-family:var(--vf-font-mono);background:var(--vf-panel-2);color:var(--vf-text);border:1px solid var(--vf-line);border-radius:var(--vf-radius-2);padding:var(--vf-space-4)}
@@ -17,8 +17,8 @@
   <main class="surface stack">
     <div class="surface-id">VERIFRAX / verify</div>
     <h1 class="surface-title">VERIFRAX Verify</h1>
-    <p class="surface-role">Deterministic verification of proof objects.</p>
-    <p class="surface-boundary">This surface verifies proof. It does not publish proof, issue authority, or operate archive retrieval.</p>
+    <p class="surface-role">Public verifier surface for proof structure inspection.</p>
+    <p class="surface-boundary">This surface inspects proof structure. It does not publish proof, issue authority, execute runtime actions, or operate archive retrieval.</p>
 
     <section class="panel">
       <h2>Verifier</h2>
@@ -71,7 +71,7 @@
         }, null, 2));
 
         if(okSchema && okHash){
-          set("status", "VERIFIED (STRUCTURE OK)\nNOTE: offline UI validates schema + presence only.\nHash validation requires local file hashing.");
+          set("status", "STRUCTURE OK (NOT FULL VERIFICATION)\nNOTE: offline UI validates schema + presence only.\nHash validation requires local file hashing.");
         } else {
           set("status", "INVALID PROOF");
         }

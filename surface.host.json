@@ -5,7 +5,7 @@
   "role": "verify",
   "title": "VERIFRAX Verify",
   "description": "Public verification surface for deterministic proof inspection.",
-  "deployMode": "static-root",
+  "deployMode": "preview-only",
   "adjacentHosts": {
     "Execution": "https://api.verifrax.net",
     "Proof publication": "https://proof.verifrax.net",

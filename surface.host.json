@@ -4,7 +4,7 @@
   "hostClass": "tool",
   "role": "verify",
   "title": "VERIFRAX Verify",
-  "description": "Public verification surface for deterministic proof inspection.",
+  "description": "Public verifier surface for proof structure inspection.",
   "deployMode": "preview-only",
   "adjacentHosts": {
     "Execution": "https://api.verifrax.net",

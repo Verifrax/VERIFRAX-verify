@@ -13,7 +13,7 @@ Public verification repository for `https://verify.verifrax.net/`, serving a sta
 * npm package: `@verifrax/verifrax-verify`
 * Surface class: public-facing static verification UI
 * Deployment model: static site surface
-* Package status: repository surface only unless package metadata explicitly states otherwise
+* Package status: public npm package `@verifrax/verifrax-verify@0.1.2` plus public verification UI surface
 * Stack position: verification surface, downstream of authority and execution, separate from proof publication
 * Artifact-chain relation: public verification path for the broader chain, but not the authority source, receipt issuer, or artifact registry root
 * License: Apache License Version 2.0

@@ -26,6 +26,19 @@ Public verification repository for `https://verify.verifrax.net/`, serving a sta
 
 This repository owns the public verifier surface.
 
+Verification is not publication. Verification is not execution. Verification is not authority.
+
+## Verifier role boundary
+
+This repository is the public verification surface only.
+
+It exists to inspect published proof material and return verification results.
+
+It is not proof publication.
+It is not authority issuance.
+It is not governed execution.
+
+
 Its job is to make verification available publicly, portably, and inspectably.
 
 It exists so a reader can:
@@ -51,38 +64,10 @@ That separation is the point.
 
 ## What this repository is not
 
-`VERIFRAX-verify` is not:
-
-* the authority layer
-* the execution runtime
-* the proof publication repository
-* the evidence-root repository
-* the seal/archive repository
-* the intake surface
-* the commercial surface
-* the docs root
-* a mutable server-side verification service with hidden trust
-* an authority object issuer
-* a CORPIFORM receipt emitter
-* the artifact registry for `artifact-0005`
-
-It does not:
-
-* publish proof records to `proof.verifrax.net`
-* issue authority objects for `auctoriseal.verifrax.net`
-* execute governed actions at `api.verifrax.net`
-* produce receipts for `corpiform.verifrax.net`
-* register artifact-chain truth in the `VERIFRAX` evidence root
-* replace `proof.verifrax.net`
-* replace `SIGILLARIUM`
-* convert a proof display into authority truth by itself
-
-Verification is not publication.
-Verification is not execution.
-Verification is not authority.
-
-If that line blurs, the repository is already wrong.
-
+This repository is not proof publication.
+This repository is not authority issuance.
+This repository is not governed execution.
+This repository is not intake.
 ## Public host ownership
 
 This repository owns exactly this public host:

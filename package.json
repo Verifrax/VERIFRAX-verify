@@ -1,10 +1,11 @@
 {
-  "name": "verifrax-verify",
+  "name": "@verifrax/verifrax-verify",
   "private": true,
   "version": "0.1.2",
   "type": "module",
   "scripts": {
     "build": "node .verifrax/build.js",
     "test": "node .verifrax/test.js"
-  }
+  },
+  "license": "Apache-2.0"
 }

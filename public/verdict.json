@@ -1,0 +1,13 @@
+{
+  "law_ref": "SYNTAGMARIUM@main",
+  "state_ref": "ORBISTIUM@current",
+  "proof_ref": "proof:artifact-0001",
+  "execution_ref": "receipt:example-0001",
+  "verifier_version": "0.2.0",
+  "verdict": "INDETERMINATE",
+  "reason_codes": [
+    "PUBLIC_DEMO_FIXTURE"
+  ],
+  "contradictions": [],
+  "generated_at": "2026-04-09T00:00:00Z"
+}

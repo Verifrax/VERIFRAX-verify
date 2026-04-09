@@ -1,10 +1,31 @@
 # VERIFRAX-verify
 
+Deterministic public verdict surface.
+
 ![License](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![Surface](https://img.shields.io/badge/surface-public%20verifier-111111)
 ![Host](https://img.shields.io/badge/host-verify.verifrax.net-1f6feb)
 
 Public verification repository for `https://verify.verifrax.net/`, serving a static verification surface for Verifrax proof material without becoming an authority issuer, proof publisher, execution runtime, archive surface, or evidence-root repository.
+
+
+## Public verdict contract
+
+This surface publishes a reproducible public verdict contract.
+
+Required fields:
+- `law_ref`
+- `state_ref`
+- `proof_ref`
+- `execution_ref`
+- `verifier_version`
+- `verdict`
+- `reason_codes`
+- `contradictions`
+- `generated_at`
+
+Demo artifact:
+- `public/verdict.json`
 
 ## Status
 

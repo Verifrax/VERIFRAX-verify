@@ -9,6 +9,11 @@ Deterministic public verdict surface.
 Public verification repository for `https://verify.verifrax.net/`, serving a static verification surface for Verifrax proof material without becoming an authority issuer, proof publisher, execution runtime, archive surface, or evidence-root repository.
 
 
+## Terminal planes
+
+- **[ANAGNORIUM](https://github.com/Verifrax/ANAGNORIUM)** — terminal recognition
+- **[REGRESSORIUM](https://github.com/Verifrax/REGRESSORIUM)** — terminal recourse
+
 ## Public verdict contract
 
 This surface publishes a reproducible public verdict contract.
@@ -384,3 +389,11 @@ Do not introduce:
 ## License
 
 Apache License Version 2.0. See `LICENSE`.
+
+## Adjacent sovereign surfaces
+
+This repository is part of the Verifrax sovereign stack and remains bounded relative to:
+
+- **[ANAGNORIUM](https://github.com/Verifrax/ANAGNORIUM)** for terminal recognition
+- **[REGRESSORIUM](https://github.com/Verifrax/REGRESSORIUM)** for terminal recourse
+

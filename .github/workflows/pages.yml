@@ -1,4 +1,4 @@
-name: pages
+name: Publish VERIFRAX verify surface
 
 on:
   push:
@@ -22,40 +22,29 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
+      - uses: actions/configure-pages@v5
 
-      - name: Build dist
-        run: |
-          set -euo pipefail
-          npm run build
-
-      - name: Bind verifier hostname and publish static routes
+      - name: Prepare artifact
         shell: bash
         run: |
           set -euo pipefail
-          test -f public/CNAME
-          grep -Fx "verify.verifrax.net" public/CNAME
-          cp public/CNAME dist/CNAME
+          rm -rf out
+          mkdir -p out
+          cp CNAME out/CNAME
+          cp index.html out/index.html
+          cp 404.html out/404.html
+          [ -d assets ] && cp -R assets out/assets || true
+          [ -d public ] && cp -R public out/public || true
+          [ -d surface-system ] && cp -R surface-system out/surface-system || true
+          [ -d dist ] && cp -R dist out/dist || true
+          test -f out/index.html
+          test -f out/404.html
+          test -f out/CNAME
+          grep -Fx "verify.verifrax.net" out/CNAME
 
-          mkdir -p dist/check dist/spec
-          cp public/check/index.html dist/check/index.html
-          cp public/spec/index.html dist/spec/index.html
-          cp -R surface-system dist/surface-system
-
-          test -f dist/index.html
-          test -f dist/CNAME
-          test -f dist/check/index.html
-          test -f dist/spec/index.html
-          test -f dist/surface-system/shell/base.css
-          grep -q "<title>VERIFRAX Verify</title>" dist/index.html
-
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: out
+
       - id: deployment
         uses: actions/deploy-pages@v4

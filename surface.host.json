@@ -4,14 +4,18 @@
   "hostClass": "tool",
   "role": "verify",
   "title": "VERIFRAX Verify",
-  "description": "Public verifier surface for proof structure inspection. This surface verifies published proof. It does not publish proof, issue authority, execute governed actions, or accept intake.",
+  "description": "Verification surface for the VERIFRAX public perimeter. This surface verifies published proof only. It does not publish proof, issue authority, execute governed actions, or accept intake.",
   "deployMode": "static-root",
   "adjacentHosts": {
-    "Check": "https://verify.verifrax.net",
-    "Proof": "https://proof.verifrax.net",
+    "Root": "https://www.verifrax.net",
     "Docs": "https://docs.verifrax.net",
-    "Status": "https://status.verifrax.net",
+    "Proof": "https://proof.verifrax.net",
+    "Apply": "https://apply.verifrax.net",
+    "Execution": "https://api.verifrax.net",
     "Authority": "https://auctoriseal.verifrax.net",
-    "Runtime": "https://corpiform.verifrax.net"
+    "Runtime": "https://corpiform.verifrax.net",
+    "Enforcement": "https://cicullis.verifrax.net",
+    "Archive": "https://sigillarium.verifrax.net",
+    "Status": "https://status.verifrax.net"
   }
 }

@@ -1,5 +1,8 @@
 # VERIFRAX-verify
 
+Tooling manifest only: not part of the 16 canonical published packages.
+
+
 VERIFRAX-verify is the Verifrax public verification boundary: the public surface that verifies published Verifrax materials and exposes verifier-facing results without becoming authored protocol source, authority issuance, governed execution, proof publication, archive/reference, or intake.
 
 ## Proof artifacts

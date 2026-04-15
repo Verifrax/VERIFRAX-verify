@@ -1,10 +1,18 @@
 {
-  "name": "verifrax-verify",
-  "private": true,
-  "version": "0.1.2",
+  "name": "@verifrax/verifrax-verify",
+  "private": false,
+  "version": "0.1.3",
   "type": "module",
   "scripts": {
     "build": "node .verifrax/build.js",
     "test": "node .verifrax/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Verifrax/VERIFRAX-verify.git"
+  },
+  "homepage": "https://github.com/Verifrax/VERIFRAX-verify#readme",
+  "bugs": {
+    "url": "https://github.com/Verifrax/VERIFRAX-verify/issues"
   }
 }

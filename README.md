@@ -1,4 +1,5 @@
 # VERIFRAX-verify
+Package: @verifrax/verifrax-verify
 
 Tooling manifest only: not part of the 16 canonical published packages.
 

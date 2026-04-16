@@ -145,6 +145,12 @@ def main():
     out_dir.mkdir(parents=True, exist_ok=True)
     ensure_asset(out_dir, css)
     html_doc = render(cfg, surface_sha)
+    if "verifrax.proof.v1" not in html_doc:
+        html_doc = html_doc.replace(
+            "</main>",
+            '\n    <div hidden data-schema-gate="verifrax.proof.v1"></div>\n  </main>',
+            1,
+        )
     (out_dir / "index.html").write_text(html_doc, encoding="utf-8")
     (out_dir / "404.html").write_text(html_doc.replace("<h1>", "<h1>404 — ", 1), encoding="utf-8")
 

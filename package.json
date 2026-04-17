@@ -14,5 +14,6 @@
   "homepage": "https://github.com/Verifrax/VERIFRAX-verify#readme",
   "bugs": {
     "url": "https://github.com/Verifrax/VERIFRAX-verify/issues"
-  }
+  },
+  "license": "Apache-2.0"
 }

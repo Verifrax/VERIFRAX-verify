@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/Verifrax/VERIFRAX-verify/issues"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "files": [
+    ".verifrax/build.js",
+    ".verifrax/test.js",
+    "index.html",
+    "assets/surface.css",
+    "dist/index.html",
+    "README.md",
+    "LICENSE"
+  ]
 }

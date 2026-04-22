@@ -1,7 +1,7 @@
 {
   "name": "@verifrax/verifrax-verify",
   "private": false,
-  "version": "0.1.4",
+  "version": "0.1.6",
   "type": "module",
   "scripts": {
     "build": "node .verifrax/build.js",

@@ -1,0 +1,28 @@
+{
+  "object_type": "verification-result",
+  "object_id": "verification-result-0001",
+  "schema_version": "1.0.0",
+  "status": "ACTIVE_TRUTH",
+  "truth_type": "ACTIVE_TRUTH",
+  "claim_class_id": "verification-result",
+  "governing_law_ref": "SYNTAGMARIUM/claim-classes/verification-result.json",
+  "accepted_epoch_ref": "ORBISTIUM/epochs/current/accepted-epoch-0001.json",
+  "verification_chamber": "VERIFRAX-verify",
+  "subject": {
+    "kind": "public-object-family",
+    "ref": "VERIFRAX-verify/verifications/current/"
+  },
+  "result": {
+    "verdict": "OBJECT_FAMILY_PRESENT",
+    "meaning": "The public verification-result object family is present as a bounded current object surface.",
+    "scope": "object-family publication only",
+    "not_a_claim": [
+      "not proof publication",
+      "not authority issuance",
+      "not governed execution",
+      "not terminal recognition",
+      "not terminal recourse"
+    ]
+  },
+  "created_at": "2026-04-25T00:00:00Z"
+}

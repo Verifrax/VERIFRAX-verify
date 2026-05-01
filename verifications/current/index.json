@@ -1,0 +1,13 @@
+{
+  "object_type": "verification-result-index",
+  "schema_version": "1.0.0",
+  "status": "ACTIVE_TRUTH",
+  "current": "verification-result-0001.json",
+  "entries": [
+    {
+      "object_id": "verification-result-0001",
+      "path": "verifications/current/verification-result-0001.json",
+      "status": "ACTIVE_TRUTH"
+    }
+  ]
+}
